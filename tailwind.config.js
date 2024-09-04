@@ -6,13 +6,29 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+      fontFamily: {
+        akira: ['var(--font-mango)'],
+        Humane: ['Humane', 'sans-serif'],
+        Sunage: ['Sunage'],
+        Born: ['Born'],
+      },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        'fadeOut': 'fadeOut 3s ease-in-out forwards',
+      },
+      keyframes: {
+        fadeOut: {
+          '0%': { opacity: '1'},
+          '100%': {opacity: '1'}
+        },
+      },
     },
   },
   plugins: [],
+  darkMode: "class"
 };
